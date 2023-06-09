@@ -14,7 +14,12 @@ inclusive un mensaje personalizado -->
   </head>
   <body>
     <h1>Phone Number</h1>
-    <input type="number" class="numero-telefonico" id="numero-telefonico" />
+    <input
+      type="number"
+      class="numero-telefonico"
+      id="numero-telefonico"
+      inputmode="numeric"
+      pattern="[0-9]*" />
     <button class="btn btnEnviar">Enviar</button>
     <script src="./main.js"></script>
   </body>
