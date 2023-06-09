@@ -1,15 +1,10 @@
-//* Utilizo los selectores */
-const numeroTelefonico = document.querySelector("#input-text"); //* Ya tengo capturado el numero de telefono */
-const enviarWhats = document.querySelector(".submit-button");
+const paginaWhats = `https://wa.me/+52`;
+const numeroTelefonicoDOM = document.getElementById("#numero-telefonico"); //* Ya tengo el numero telefonico */
 
-const init = (numeroTelefonico) => {
-  const numeroPagina = `https://wa.me/+52${numeroTelefonico}`;
-  console.log(numeroPagina);
-  window.open(numeroPagina);
-};
+document.querySelector(".btnEnviar").addEventListener("click", () => {
+  const pagina = Number(document.querySelector(".numero-telefonico").value);
 
-enviarWhats.addEventListener("click", () => {
-  init();
+  console.log(paginaWhats + pagina);
+
+  nuevoWhats = window.open(paginaWhats + pagina);
 });
-
-console.log(enviarWhats);
